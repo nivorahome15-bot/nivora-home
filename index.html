@@ -24,7 +24,9 @@
   /* Backgrounds */
   --cream: #A99A85;       /* Existing hero background */
   --paper: #B7AFA1;       /* Warm Greige: navigation and sections */
-  --card-bg: #C8BFB1;     /* Slightly lighter product card surface */
+  --card-bg: #D8D0C4;     /* Muted warm card surface */
+  --product-section-bg: #A99F90; /* Medium warm greige for The Nivora edit */
+  --product-border: #8E8475;
   --section-alt: #969B83; /* Existing sage section */
 
   /* Typography */
@@ -97,7 +99,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 255, 255, 0.97);
+      background: var(--paper);
       border-bottom: 1px solid var(--border);
     }
 
@@ -364,7 +366,12 @@
     }
 
     .products-section {
-      background: #FBFAF7;
+      background: var(--product-section-bg);
+    }
+
+    .products-section .eyebrow,
+    .products-section .section-subtitle {
+      color: var(--ink);
     }
 
     .shop-toolbar {
@@ -385,7 +392,7 @@
 
     .filter-button {
       border: 1px solid var(--border);
-      background: white;
+      background: var(--card-bg);
       padding: 9px 14px;
       border-radius: 30px;
       color: var(--muted);
@@ -405,7 +412,7 @@
       align-items: center;
       gap: 8px;
       border: 1px solid var(--border);
-      background: white;
+      background: var(--card-bg);
       padding: 10px 13px;
       min-width: 220px;
     }
@@ -486,7 +493,10 @@
     }
 
     .product-info {
-      padding-top: 13px;
+      padding: 11px 12px 13px;
+      background: var(--card-bg);
+      border: 1px solid var(--product-border);
+      border-top: 0;
     }
 
     .product-category {
@@ -950,7 +960,7 @@
         left: 0;
         right: 0;
         padding: 22px 5%;
-        background: white;
+        background: var(--paper);
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow);
         flex-direction: column;
