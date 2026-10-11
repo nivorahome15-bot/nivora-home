@@ -11,42 +11,18 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    
-
-
-
-
-:root {
-  /* Brand colors — unchanged */
-  --olive: #596648;
-  --olive-dark: #344333;
-
-  /* Backgrounds */
-  --cream: #A99A85;       /* Existing hero background */
-  --paper: #B7AFA1;       /* Warm Greige: navigation and sections */
-  --card-bg: #D8D0C4;     /* Muted warm card surface */
-  --product-section-bg: #A99F90; /* Medium warm greige for The Nivora edit */
-  --product-border: #8E8475;
-  --section-alt: #969B83; /* Existing sage section */
-
-  /* Typography */
-  --ink: #292B24;
-  --muted: #514D45;
-
-  /* Borders and accents */
-  --border: #A69D90;
-  --terracotta: #A36E4F;
-
-  /* Layout and effects */
-  --radius: 8px;
-  --shadow: 0 10px 32px rgba(41, 43, 36, 0.10);
-}
-
-
-
-
-
-
+    :root {
+      --olive: #82856B;
+      --olive-dark: #666A50;
+      --cream: #F7F5EF;
+      --paper: #FFFFFF;
+      --ink: #292B24;
+      --muted: #77796F;
+      --border: #E8E5DC;
+      --terracotta: #B8755A;
+      --radius: 4px;
+      --shadow: 0 12px 40px rgba(41, 43, 36, 0.09);
+    }
 
     * {
       box-sizing: border-box;
@@ -99,7 +75,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: var(--paper);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
     }
 
@@ -366,12 +342,7 @@
     }
 
     .products-section {
-      background: var(--product-section-bg);
-    }
-
-    .products-section .eyebrow,
-    .products-section .section-subtitle {
-      color: var(--ink);
+      background: #FBFAF7;
     }
 
     .shop-toolbar {
@@ -392,7 +363,7 @@
 
     .filter-button {
       border: 1px solid var(--border);
-      background: var(--card-bg);
+      background: white;
       padding: 9px 14px;
       border-radius: 30px;
       color: var(--muted);
@@ -412,7 +383,7 @@
       align-items: center;
       gap: 8px;
       border: 1px solid var(--border);
-      background: var(--card-bg);
+      background: white;
       padding: 10px 13px;
       min-width: 220px;
     }
@@ -493,10 +464,7 @@
     }
 
     .product-info {
-      padding: 11px 12px 13px;
-      background: var(--card-bg);
-      border: 1px solid var(--product-border);
-      border-top: 0;
+      padding-top: 13px;
     }
 
     .product-category {
@@ -960,7 +928,7 @@
         left: 0;
         right: 0;
         padding: 22px 5%;
-        background: var(--paper);
+        background: white;
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow);
         flex-direction: column;
