@@ -25,7 +25,7 @@
   --cream: #A99A85;       /* Existing hero background */
   --paper: #B7AFA1;       /* Warm Greige: navigation and sections */
   --card-bg: #D8D0C4;     /* Muted warm card surface */
-  --product-section-bg: #A99F90; /* Medium warm greige for The Nivora edit */
+  --product-section-bg: #596648; /* Olive green for The Nivora edit */
   --product-border: #8E8475;
   --section-alt: #969B83; /* Existing sage section */
 
@@ -303,6 +303,11 @@
       margin: auto;
     }
 
+    #categories,
+    #difference {
+      background: var(--section-alt);
+    }
+
     .section-heading {
       text-align: center;
       margin-bottom: 34px;
@@ -367,11 +372,12 @@
 
     .products-section {
       background: var(--product-section-bg);
+      color: #F6F4ED;
     }
 
     .products-section .eyebrow,
     .products-section .section-subtitle {
-      color: var(--ink);
+      color: #F6F4ED;
     }
 
     .shop-toolbar {
@@ -402,9 +408,9 @@
 
     .filter-button.active,
     .filter-button:hover {
-      background: var(--olive);
-      color: white;
-      border-color: var(--olive);
+      background: #F6F4ED;
+      color: var(--olive-dark);
+      border-color: #F6F4ED;
     }
 
     .search-box {
@@ -497,6 +503,7 @@
       background: var(--card-bg);
       border: 1px solid var(--product-border);
       border-top: 0;
+      color: var(--ink);
     }
 
     .product-category {
@@ -539,6 +546,15 @@
       text-align: center;
       color: var(--muted);
       padding: 50px 10px;
+    }
+
+    .products-section .no-results {
+      color: #F6F4ED;
+    }
+
+    .products-section .mobile-add {
+      color: var(--olive-dark);
+      background: var(--card-bg);
     }
 
     .editorial {
@@ -1268,7 +1284,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="difference">
       <div class="section-inner">
         <div class="section-heading">
           <div class="eyebrow">A little more thought in every detail</div>
