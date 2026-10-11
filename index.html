@@ -11,18 +11,42 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --olive: #82856B;
-      --olive-dark: #666A50;
-      --cream: #F7F5EF;
-      --paper: #FFFFFF;
-      --ink: #292B24;
-      --muted: #77796F;
-      --border: #E8E5DC;
-      --terracotta: #B8755A;
-      --radius: 4px;
-      --shadow: 0 12px 40px rgba(41, 43, 36, 0.09);
-    }
+    
+
+
+
+
+:root {
+  /* Brand colors — unchanged */
+  --olive: #596648;
+  --olive-dark: #344333;
+
+  /* Backgrounds */
+  --cream: #A99A85;       /* Existing hero background */
+  --paper: #B7AFA1;       /* Warm Greige: navigation and sections */
+  --card-bg: #D8D0C4;     /* Muted warm card surface */
+  --product-section-bg: #A99F90; /* Medium warm greige for The Nivora edit */
+  --product-border: #8E8475;
+  --section-alt: #969B83; /* Existing sage section */
+
+  /* Typography */
+  --ink: #292B24;
+  --muted: #514D45;
+
+  /* Borders and accents */
+  --border: #A69D90;
+  --terracotta: #A36E4F;
+
+  /* Layout and effects */
+  --radius: 8px;
+  --shadow: 0 10px 32px rgba(41, 43, 36, 0.10);
+}
+
+
+
+
+
+
 
     * {
       box-sizing: border-box;
@@ -75,7 +99,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 255, 255, 0.97);
+      background: var(--paper);
       border-bottom: 1px solid var(--border);
     }
 
@@ -342,7 +366,12 @@
     }
 
     .products-section {
-      background: #FBFAF7;
+      background: var(--product-section-bg);
+    }
+
+    .products-section .eyebrow,
+    .products-section .section-subtitle {
+      color: var(--ink);
     }
 
     .shop-toolbar {
@@ -363,7 +392,7 @@
 
     .filter-button {
       border: 1px solid var(--border);
-      background: white;
+      background: var(--card-bg);
       padding: 9px 14px;
       border-radius: 30px;
       color: var(--muted);
@@ -383,7 +412,7 @@
       align-items: center;
       gap: 8px;
       border: 1px solid var(--border);
-      background: white;
+      background: var(--card-bg);
       padding: 10px 13px;
       min-width: 220px;
     }
@@ -464,7 +493,10 @@
     }
 
     .product-info {
-      padding-top: 13px;
+      padding: 11px 12px 13px;
+      background: var(--card-bg);
+      border: 1px solid var(--product-border);
+      border-top: 0;
     }
 
     .product-category {
@@ -928,7 +960,7 @@
         left: 0;
         right: 0;
         padding: 22px 5%;
-        background: white;
+        background: var(--paper);
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow);
         flex-direction: column;
@@ -1199,6 +1231,7 @@
             <button class="filter-button active" data-filter="All">All pieces</button>
             <button class="filter-button" data-filter="Vases">Vases</button>
             <button class="filter-button" data-filter="Wall Art">Wall Art</button>
+            <button class="filter-button" data-filter="Wall Hangings">Wall Hangings</button>
             <button class="filter-button" data-filter="Lighting">Lighting</button>
             <button class="filter-button" data-filter="Decor Objects">Decor Objects</button>
           </div>
@@ -1346,7 +1379,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
-    // AI-GENERATED SAMPLE PRODUCTS: placeholders only; replace with supplier-confirmed products before selling.
+    // Preview catalogue: prices are provisional until supplier costs, shipping and stock are confirmed.
     const products = [
       {
         id: 1,
@@ -1379,6 +1412,38 @@
         price: 699,
         tag: "New",
         image: "assets/products/hammered-gold-bowl.jpg"
+      },
+      {
+        id: 5,
+        name: "Elephant Bell Door Hanging",
+        category: "Wall Hangings",
+        price: 499,
+        tag: "New",
+        image: "assets/products/elephant-door-hanging.webp"
+      },
+      {
+        id: 6,
+        name: "Golden Tree Lantern Set (2 pcs)",
+        category: "Lighting",
+        price: 699,
+        tag: "New",
+        image: "assets/products/gold-lantern-set.jpg"
+      },
+      {
+        id: 7,
+        name: "Blossom Ivory Vase",
+        category: "Vases",
+        price: 899,
+        tag: "New",
+        image: "assets/products/blossom-ivory-vase.jpg"
+      },
+      {
+        id: 8,
+        name: "Blossom Decorative Bowl",
+        category: "Decor Objects",
+        price: 799,
+        tag: "New",
+        image: "assets/products/blossom-decorative-bowl.jpg"
       }
     ];
 
